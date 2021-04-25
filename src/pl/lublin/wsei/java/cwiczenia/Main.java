@@ -51,6 +51,13 @@ public class Main {
             if ((num1 == 0) || (num2 == 0)) break;
             System.out.printf("Wynik dodawania: %d + %d = %d%n", num1, num2, num1 + num2);
         } while (true);*/
+        
+        Scanner input = new Scanner(System.in);
+        System.out.print("Podaj liczbę: ");
+        int num = input.nextInt();
+        String toHEX = Integer.toHexString(num);
+        String toBIN = Integer.toBinaryString(num);
+        System.out.println("DEC = " + num + " BIN = " + leftPad(toBIN, '0', 8) + " HEX = %" + leftPad(toHEX, '0', 4).toUpperCase());
 
 //        int[] liczby = new int[30];
 //        Random rnd = new Random();
@@ -70,7 +77,8 @@ public class Main {
 //        }
 //        System.out.printf("MIN = %d, MAX = %d, AVG = %f", mn,mx,(float)avg/liczby.length);
 
-        System.out.printf("%s%n", StringFun.anarhize("Hello mike"));
+//        System.out.printf("%s%n", StringFun.anarhize("Hello mike"));
+        
         Account acc = new Account();
         acc.setName("piotr Gołabek");
         System.out.println(acc.getName());
